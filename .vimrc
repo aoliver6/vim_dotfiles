@@ -39,4 +39,7 @@ set number
  set background=dark
  colorscheme solarized
 
-
+" Remaps esc to jj
+imap jj <Esc>
+vmap jj <Esc>
+cmap jj <Esc>
