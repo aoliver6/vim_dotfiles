@@ -2,29 +2,31 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" alternatively, pass a path where Vundle should install plugins
-"let path = '~/some/path/here'
-"call vundle#rc(path)
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+ " alternatively, pass a path where Vundle should install plugins
+ "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-
-filetype plugin indent on     " required
+Plugin 'gmarik/Vundle.vim'
+" All of your Plugins must be added before the following line
+"Autocomplete plugin
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()            " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-
+"Brief help
+":PluginList       - lists configured plugins
+":PluginInstall    - installs plugins; append `!` to update or just
+":PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+"auto-approve removal
+"
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Plugin commands are not allowed.
-" Put your stuff after this line
-Plugin 'Valloric/YouCompleteMe'
-
+" Put your non-Plugin stuff after this line
 
 set bs=2
 set ts=4
@@ -41,5 +43,5 @@ set number
 
 " Remaps esc to jj
 imap jj <Esc>
-vmap jj <Esc>
+vmap v <Esc>
 cmap jj <Esc>
