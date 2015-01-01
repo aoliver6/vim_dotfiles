@@ -29,8 +29,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set bs=2
-set ts=4
-set sw=4
+" Tabs set at 2 for Ruby. Ts and sw would usually be at 4.
+set ts=2
+set sw=2
 set number
 " shows row and column number at bottom right corner
  set ruler
