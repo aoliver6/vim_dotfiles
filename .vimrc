@@ -29,12 +29,14 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set bs=2
-" Tabs set at 2 for Ruby. Ts and sw would usually be at 4.
-set ts=2
-set sw=2
+" tab settings for 4 spaces
+set ts=4
+set expandtab
+set sw=4
+set softtabstop=4
 set number
 " shows row and column number at bottom right corner
- set ruler
+set ruler
 "copy the indentation of the previous line if auto indent doesn't know what to do
 set copyindent
 " Highlight matching braces/tags
@@ -44,7 +46,7 @@ set ignorecase
 " ...unless there's a capital letter in the query
 set smartcase
 "Highlight search matches
-set hlsearch
+"set hlsearch
 " Search while you enter the query, not after
 set incsearch
 "More undos
