@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+"Vundle Begins
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -9,9 +9,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-" All of your Plugins must be added before the following line
 "Autocomplete plugin
 Plugin 'Shougo/neocomplete'
+"Emmet plugin, allows html shortcuts
+Plugin 'mattn/emmet-vim'
+" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -26,11 +28,13 @@ filetype plugin indent on    " required
 "auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Put your non-Plugin stuff after this line END Vundle
 
+"IF Changing tab, change sts. IMPORTANT
 set bs=2
 " tab settings for 4 spaces
 set ts=4
+"Expands tabs to spaces
 set expandtab
 set sw=4
 set softtabstop=4
@@ -70,6 +74,8 @@ imap ;; <Esc>
 vmap ;; <Esc>
 cmap ;; <Esc>
 
+
+"DO NOT TOUCH anything below this point. Neocomplete settings
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
